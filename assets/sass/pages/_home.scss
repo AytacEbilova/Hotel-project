@@ -41,7 +41,7 @@
 
 //-----------------------------FIND-NOW START-------------------------------------------------------------------------------
 .find-now {
-    background-color: white;
+    background-color: $primary-gray;
 
     .row {
 
@@ -76,76 +76,85 @@
 
     }
 }
+
 //-----------------------------FIND NOW SECTION END-------------------------------------------------------------------
 
 //-------------------------------OUR SERVICES SECTION START----------------------------------------------------------------
 
-.services-text{
-    font-family:$work-sans;
-    font-weight: bold;
-    color: $color-green;
-    font-size: 24px;
-    text-transform: uppercase;
-    margin-left: 100px;
-}
-.sliders{
-    max-width: 1200px;
-    width: 100%;
-    .carousel{
+.slide-container{
+    background-color: $primary-gray;
+    .services-text{
+        font-family:$work-sans;
+        font-weight: bold;
+        color: $color-green;
+        font-size: 24px;
+        text-transform: uppercase;
         margin-left: 100px;
-        padding: 50px 0;
-        display: grid;
-        grid-auto-flow: column;
-        grid-auto-columns: calc((100% / 3) - 12px);
-        gap: 16px;
-        overflow: hidden;
-        scroll-behavior: smooth;
-        scrollbar-width: 0;
-    
-    .card{
-        height: 340px;
-        list-style: none;
-        border-radius: 8px;
-        @include flex();
-        flex-direction: column;
-        padding-bottom: 15px;
-        cursor: pointer;
-        .img{
-            img{
-                width:60px;
-                height: 60px;
-                object-fit: cover;
+    }
+    .sliders{
+        max-width: 1200px;
+        width: 100%;
+        
+       
+        .carousel{
+            margin-left: 100px;
+            padding: 50px 0;
+            display: grid;
+            grid-auto-flow: column;
+            grid-auto-columns: calc((100% / 3) - 12px);
+            gap: 16px;
+            overflow: hidden;
+            scroll-behavior: smooth;
+            scrollbar-width: 0;
+        
+        .card{
+            height: 340px;
+            list-style: none;
+            @include flex();
+            flex-direction: column;
+            padding-bottom: 15px;
+            border-style:none ;
+            cursor: pointer;
+            .img{
+                img{
+                    width:60px;
+                    height: 60px;
+                    object-fit: cover;
+                }
+            }
+            a{
+                text-decoration: none;
+                color: gray;
+                padding-bottom: 10px;
+                font-weight: bold;
+            }
+            a:hover{
+                color: black;
+                
+            }
+            .slide-h2{
+                font-size: 20px;
+                font-weight: bold;
+                font-family:$work-sans;
+                color: $bg-dark;
+                padding: 10px 0;
+                margin-left: 20px;
+            }
+            p{
+                color: rgba(0, 0, 0, 0.5);
+                margin-top: 0;
+                margin-bottom: 1rem;
+                padding: 15px 0;
+                margin-left: 20px;
+                font-size: 14px;
+                font-family: $robote;
             }
         }
-        a{
-            text-decoration: none;
-            color: gray;
-            padding-bottom: 10px;
-            font-weight: bold;
-        }
-        a:hover{
-            color: black;
-            
-        }
-        .slide-h2{
-            font-size: 20px;
-            font-weight: bold;
-            font-family:$work-sans;
-            color: $bg-dark;
-            padding: 10px 0;
-            margin-left: 20px;
-        }
-        p{
-            color: rgba(0, 0, 0, 0.5);
-            margin-top: 0;
-            margin-bottom: 1rem;
-            padding: 15px 0;
-            margin-left: 20px;
-        }
+    }
+    
     }
 }
 
-}
 @media screen and (max-width: 900px) {
     .sliders{
         .carousel{
@@ -236,3 +245,16 @@
 }
 
 //-------------------------ABOUT-SECT END-------------------------------------------------------------------
+
+//-------------------------BLOG SECTION START------------------------------------------------------------------------
+.slider-container{
+    padding: 100px 0;
+    .card{
+        .blog-img{
+            img{
+                max-width: 100%;
+                height: auto;
+            }
+        }
+    }
+}

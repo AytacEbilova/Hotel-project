@@ -217,7 +217,7 @@ footer .col-6 .tool .footer-icon li a:hover {
 }
 
 .find-now {
-  background-color: white;
+  background-color: rgb(248, 249, 250);
 }
 .find-now .row .form {
   display: flex;
@@ -247,7 +247,10 @@ footer .col-6 .tool .footer-icon li a:hover {
   border-style: none;
 }
 
-.services-text {
+.slide-container {
+  background-color: rgb(248, 249, 250);
+}
+.slide-container .services-text {
   font-family: "Work Sans", sans-serif;
   font-weight: bold;
   color: #00917c;
@@ -255,12 +258,11 @@ footer .col-6 .tool .footer-icon li a:hover {
   text-transform: uppercase;
   margin-left: 100px;
 }
-
-.sliders {
+.slide-container .sliders {
   max-width: 1200px;
   width: 100%;
 }
-.sliders .carousel {
+.slide-container .sliders .carousel {
   margin-left: 100px;
   padding: 50px 0;
   display: grid;
@@ -271,33 +273,33 @@ footer .col-6 .tool .footer-icon li a:hover {
   scroll-behavior: smooth;
   scrollbar-width: 0;
 }
-.sliders .carousel .card {
+.slide-container .sliders .carousel .card {
   height: 340px;
   list-style: none;
-  border-radius: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   padding-bottom: 15px;
+  border-style: none;
   cursor: pointer;
 }
-.sliders .carousel .card .img img {
+.slide-container .sliders .carousel .card .img img {
   width: 60px;
   height: 60px;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.sliders .carousel .card a {
+.slide-container .sliders .carousel .card a {
   text-decoration: none;
   color: gray;
   padding-bottom: 10px;
   font-weight: bold;
 }
-.sliders .carousel .card a:hover {
+.slide-container .sliders .carousel .card a:hover {
   color: black;
 }
-.sliders .carousel .card .slide-h2 {
+.slide-container .sliders .carousel .card .slide-h2 {
   font-size: 20px;
   font-weight: bold;
   font-family: "Work Sans", sans-serif;
@@ -305,12 +307,14 @@ footer .col-6 .tool .footer-icon li a:hover {
   padding: 10px 0;
   margin-left: 20px;
 }
-.sliders .carousel .card p {
+.slide-container .sliders .carousel .card p {
   color: rgba(0, 0, 0, 0.5);
   margin-top: 0;
   margin-bottom: 1rem;
   padding: 15px 0;
   margin-left: 20px;
+  font-size: 14px;
+  font-family: "Roboto", "sans-serif";
 }
 
 @media screen and (max-width: 900px) {
@@ -376,4 +380,12 @@ footer .col-6 .tool .footer-icon li a:hover {
   margin-top: 0;
   margin-bottom: 1rem;
   color: rgba(0, 0, 0, 0.5);
+}
+
+.slider-container {
+  padding: 100px 0;
+}
+.slider-container .card .blog-img img {
+  max-width: 100%;
+  height: auto;
 }
