@@ -1,0 +1,133 @@
+#hero-banner {
+    height: 100vh;
+    min-height: 780px;
+    background-image: url('/assets/images/img_1.jpg');
+    background-position: center;
+    background-size: cover;
+    @include flex();
+    opacity: 100px;
+
+    .hero-text {
+        text-align: center;
+
+        h2 {
+            font-family: $work-sans;
+            font-size: 50px;
+            color: $color-white;
+            margin: 0 0 48px;
+            font-weight: 700;
+        }
+
+        .btn-primary {
+            color: $color-white;
+            background-color: $color-green;
+            border: 1px solid transparent;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 1.5;
+            text-align: center;
+            cursor: pointer;
+        }
+    }
+}
+
+//-----------------------------HERO-BANNER END--------------------------------------------------------------------------
+
+//-----------------------------FIND-NOW START-------------------------------------------------------------------------------
+.find-now {
+    background-color: white;
+
+    .row {
+
+        .form {
+            @include flex();
+            gap: 20px;
+            padding: 30px 0;
+        }
+
+        .btn-lg {
+            width: 40%;
+            padding: 10px 20px;
+            background-color: $color-green;
+            color: $color-white;
+            border-style: none;
+        }
+
+        .col-lg-6 {
+            @include flex();
+            gap: 5px;
+
+        }
+
+        .button {
+            width: 40%;
+            padding: 10px 20px;
+            background-color: $color-green;
+            color: $color-white;
+            border-style: none;
+
+        }
+
+    }
+}
+
+//--------------------------------ABOUT-SECTION START-----------------------------------------------------------
+.about-sect {
+    padding: 200px 0;
+
+    .row {
+        display: flex;
+        justify-content: space-between;
+        
+        .col-lg-6{
+            position: relative;
+
+            .right-green-sect {
+                top: -100px;
+                bottom: -100px;
+                background-color: #00917c;
+                content: "";
+                position: absolute;
+                width: 200%;
+                z-index: -1;
+                left: -150%;
+            }
+
+            .image-container {
+                img {
+                    border-radius: 5px;
+                    max-width: 100%;
+                    height: auto;
+                    vertical-align: middle;
+                }
+            }
+        }
+
+        .col-lg-4 {
+            padding: 0 24px;
+            margin: 48px 0 0;
+            align-self: center;
+            .about-h2 {
+                font-family: $work-sans;
+                font-size: 24px;
+                font-weight: bold;
+                color: $color-green;
+                margin: 0 0 24px;
+                
+            }
+
+            .about-p {
+                margin-top: 0;
+                margin-bottom: 1rem;
+                color: rgba(0, 0, 0, 0.5);
+            }
+        }
+    }
+}
+//-------------------------ABOUT-SECT END-------------------------------------------------------------------
