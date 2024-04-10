@@ -1,53 +1,53 @@
-.services-text{
-    font-family:$work-sans;
-    font-weight: bold;
-    color: $color-green;
-    font-size: 24px;
-    text-transform: uppercase;
-}
+// .services-text{
+//     font-family:$work-sans;
+//     font-weight: bold;
+//     color: $color-green;
+//     font-size: 24px;
+//     text-transform: uppercase;
+// }
 
-.sliders{
-    .carousel{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 50px 0;
-        gap: 20px;
+// .sliders{
+//     .carousel{
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//         padding: 50px 0;
+//         gap: 20px;
     
-    .card{
-        width: 100%;
-        padding-left: 30px;
-        padding-right: 30px;
-        .img{
-            img{
-                width:60px;
-                height: 60px;
-                object-fit: cover;
-            }
-        }
+//     .card{
+//         width: 100%;
+//         padding-left: 30px;
+//         padding-right: 30px;
+//         .img{
+//             img{
+//                 width:60px;
+//                 height: 60px;
+//                 object-fit: cover;
+//             }
+//         }
         
-        a{
-            text-decoration: none;
-            color: $bg-gray;
-            padding-bottom: 10px;
-        }
-        a:hover{
-            color: $bg-dark;
+//         a{
+//             text-decoration: none;
+//             color: $bg-gray;
+//             padding-bottom: 10px;
+//         }
+//         a:hover{
+//             color: $bg-dark;
             
-        }
-        .slide-h2{
-            font-size: 20px;
-            font-weight: bold;
-            font-family:$work-sans;
-            color: $bg-dark;
-            padding: 10px 0;
-        }
-        p{
-            color: rgba(0, 0, 0, 0.5);
-            margin-top: 0;
-            margin-bottom: 1rem;
-            padding: 15px 0;
-        }
-    }
-}
-}
+//         }
+//         .slide-h2{
+//             font-size: 20px;
+//             font-weight: bold;
+//             font-family:$work-sans;
+//             color: $bg-dark;
+//             padding: 10px 0;
+//         }
+//         p{
+//             color: rgba(0, 0, 0, 0.5);
+//             margin-top: 0;
+//             margin-bottom: 1rem;
+//             padding: 15px 0;
+//         }
+//     }
+// }
+// }

@@ -76,7 +76,110 @@
 
     }
 }
+//-----------------------------FIND NOW SECTION END-------------------------------------------------------------------
 
+//-------------------------------OUR SERVICES SECTION START----------------------------------------------------------------
+
+.services-text{
+    font-family:$work-sans;
+    font-weight: bold;
+    color: $color-green;
+    font-size: 24px;
+    text-transform: uppercase;
+    margin-left: 100px;
+}
+.sliders{
+    max-width: 1200px;
+    width: 100%;
+    .carousel{
+        margin-left: 100px;
+        padding: 50px 0;
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: calc((100% / 3) - 12px);
+        gap: 16px;
+        overflow: hidden;
+        scroll-behavior: smooth;
+        scrollbar-width: 0;
+    
+    .card{
+        height: 340px;
+        list-style: none;
+        border-radius: 8px;
+        @include flex();
+        flex-direction: column;
+        padding-bottom: 15px;
+        cursor: pointer;
+        .img{
+            img{
+                width:60px;
+                height: 60px;
+                object-fit: cover;
+            }
+        }
+        a{
+            text-decoration: none;
+            color: gray;
+            padding-bottom: 10px;
+            font-weight: bold;
+        }
+        a:hover{
+            color: black;
+            
+        }
+        .slide-h2{
+            font-size: 20px;
+            font-weight: bold;
+            font-family:$work-sans;
+            color: $bg-dark;
+            padding: 10px 0;
+            margin-left: 20px;
+        }
+        p{
+            color: rgba(0, 0, 0, 0.5);
+            margin-top: 0;
+            margin-bottom: 1rem;
+            padding: 15px 0;
+            margin-left: 20px;
+        }
+    }
+}
+
+}
+@media screen and (max-width: 900px) {
+    .sliders{
+        .carousel{
+            grid-auto-columns: calc((100% / 2) - 9px);
+        }
+    }
+ 
+}
+
+@media screen and (max-width: 600px) {
+    .sliders{
+        .carousel{
+            grid-auto-columns: 100%;
+        }
+    }
+}
+
+
+
+
+//-------------------------------OUR SERVICES SECTION END------------------------------------------------------------------------
+
+
+//-------------------------------PREV-NEXT SECTION-----------------------------------------------------------------------
+.btn{
+    display: inline-block;
+    cursor: pointer;
+    padding: 7px 20px !important;
+    background-color: transparent;
+    border-color: transparent;
+    color: #000;
+    border-radius: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
 //--------------------------------ABOUT-SECTION START-----------------------------------------------------------
 .about-sect {
     padding: 200px 0;
@@ -84,8 +187,8 @@
     .row {
         display: flex;
         justify-content: space-between;
-        
-        .col-lg-6{
+
+        .col-lg-6 {
             position: relative;
 
             .right-green-sect {
@@ -113,13 +216,14 @@
             padding: 0 24px;
             margin: 48px 0 0;
             align-self: center;
+
             .about-h2 {
                 font-family: $work-sans;
                 font-size: 24px;
                 font-weight: bold;
                 color: $color-green;
                 margin: 0 0 24px;
-                
+
             }
 
             .about-p {
@@ -130,4 +234,5 @@
         }
     }
 }
+
 //-------------------------ABOUT-SECT END-------------------------------------------------------------------

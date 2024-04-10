@@ -127,6 +127,58 @@ header .menu-top-right .fa-phone:hover {
   border: 2px solid white;
 }
 
+footer {
+  background-color: rgb(248, 249, 250);
+  padding: 100px 0;
+}
+footer .col-6 .tool h3 {
+  color: black;
+  font-family: "Work Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.2;
+  margin: 0 0 10px;
+}
+footer .col-6 .tool ul {
+  width: 150px;
+  padding: 8px 0;
+}
+footer .col-6 .tool ul li {
+  margin: 0 0 16px;
+}
+footer .col-6 .tool ul li a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.5);
+  font-family: "Roboto", "sans-serif";
+  font-size: 14px;
+  margin: 0 0 8px;
+  padding: 10px 0;
+}
+footer .col-6 .tool .footer-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 16px;
+}
+footer .col-6 .tool .footer-icon li {
+  padding: 10px 0;
+}
+footer .col-6 .tool .footer-icon li a {
+  text-align: center;
+  background-color: #00917c;
+  border-radius: 50%;
+}
+footer .col-6 .tool .footer-icon li a i {
+  color: black;
+  text-align: center;
+  height: 20px;
+  width: 35px;
+}
+footer .col-6 .tool .footer-icon li a:hover {
+  background-color: rgb(19, 196, 19);
+}
+
 #hero-banner {
   height: 100vh;
   min-height: 780px;
@@ -195,6 +247,93 @@ header .menu-top-right .fa-phone:hover {
   border-style: none;
 }
 
+.services-text {
+  font-family: "Work Sans", sans-serif;
+  font-weight: bold;
+  color: #00917c;
+  font-size: 24px;
+  text-transform: uppercase;
+  margin-left: 100px;
+}
+
+.sliders {
+  max-width: 1200px;
+  width: 100%;
+}
+.sliders .carousel {
+  margin-left: 100px;
+  padding: 50px 0;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc(33.3333333333% - 12px);
+  gap: 16px;
+  overflow: hidden;
+  scroll-behavior: smooth;
+  scrollbar-width: 0;
+}
+.sliders .carousel .card {
+  height: 340px;
+  list-style: none;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 15px;
+  cursor: pointer;
+}
+.sliders .carousel .card .img img {
+  width: 60px;
+  height: 60px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.sliders .carousel .card a {
+  text-decoration: none;
+  color: gray;
+  padding-bottom: 10px;
+  font-weight: bold;
+}
+.sliders .carousel .card a:hover {
+  color: black;
+}
+.sliders .carousel .card .slide-h2 {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "Work Sans", sans-serif;
+  color: black;
+  padding: 10px 0;
+  margin-left: 20px;
+}
+.sliders .carousel .card p {
+  color: rgba(0, 0, 0, 0.5);
+  margin-top: 0;
+  margin-bottom: 1rem;
+  padding: 15px 0;
+  margin-left: 20px;
+}
+
+@media screen and (max-width: 900px) {
+  .sliders .carousel {
+    grid-auto-columns: calc(50% - 9px);
+  }
+}
+@media screen and (max-width: 600px) {
+  .sliders .carousel {
+    grid-auto-columns: 100%;
+  }
+}
+.btn {
+  display: inline-block;
+  cursor: pointer;
+  padding: 7px 20px !important;
+  background-color: transparent;
+  border-color: transparent;
+  color: #000;
+  border-radius: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
 .about-sect {
   padding: 200px 0;
 }
@@ -237,52 +376,4 @@ header .menu-top-right .fa-phone:hover {
   margin-top: 0;
   margin-bottom: 1rem;
   color: rgba(0, 0, 0, 0.5);
-}
-
-.services-text {
-  font-family: "Work Sans", sans-serif;
-  font-weight: bold;
-  color: #00917c;
-  font-size: 24px;
-  text-transform: uppercase;
-}
-
-.sliders .carousel {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 50px 0;
-  gap: 20px;
-}
-.sliders .carousel .card {
-  width: 100%;
-  padding-left: 30px;
-  padding-right: 30px;
-}
-.sliders .carousel .card .img img {
-  width: 60px;
-  height: 60px;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.sliders .carousel .card a {
-  text-decoration: none;
-  color: #3D3D3D;
-  padding-bottom: 10px;
-}
-.sliders .carousel .card a:hover {
-  color: black;
-}
-.sliders .carousel .card .slide-h2 {
-  font-size: 20px;
-  font-weight: bold;
-  font-family: "Work Sans", sans-serif;
-  color: black;
-  padding: 10px 0;
-}
-.sliders .carousel .card p {
-  color: rgba(0, 0, 0, 0.5);
-  margin-top: 0;
-  margin-bottom: 1rem;
-  padding: 15px 0;
 }
