@@ -382,19 +382,24 @@ footer .col-6 .tool .footer-icon li a:hover {
   color: rgba(0, 0, 0, 0.5);
 }
 
-.carousel {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.carousell {
+  margin-left: 100px;
+  padding: 50px 0;
+  display: grid;
+  grid-auto-flow: column;
   gap: 20px;
+  grid-auto-columns: calc(33.3333333333% - 20px);
+  overflow: hidden;
+  scroll-behavior: smooth;
+  scrollbar-width: 0;
 }
-.carousel .card {
+.carousell .card {
   border-radius: 0%;
 }
-.carousel .card .card-body {
+.carousell .card .card-body {
   position: relative;
 }
-.carousel .card .card-body p {
+.carousell .card .card-body p {
   text-decoration: none;
   color: black;
   font-weight: bold;
@@ -402,7 +407,7 @@ footer .col-6 .tool .footer-icon li a:hover {
   font-size: 16px;
   padding: 10px 0;
 }
-.carousel .card .card-body .slide-a {
+.carousell .card .card-body .slide-a {
   text-decoration: none;
   text-transform: uppercase;
   font-size: 12px;
@@ -410,7 +415,7 @@ footer .col-6 .tool .footer-icon li a:hover {
   letter-spacing: 0.1rem;
   color: #888;
 }
-.carousel .card .card-body i {
+.carousell .card .card-body i {
   position: absolute;
   top: -20px;
   width: 30px;
@@ -428,4 +433,10 @@ footer .col-6 .tool .footer-icon li a:hover {
   align-items: center;
   padding: 60px 0;
   gap: 5px;
+}
+
+.faq-sect {
+  background-color: #00917c;
+  margin-top: -20rem;
+  padding-top: 20rem;
 }

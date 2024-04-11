@@ -247,15 +247,23 @@
 //-------------------------ABOUT-SECT END-------------------------------------------------------------------
 
 //-------------------------BLOG SECTION START------------------------------------------------------------------------
-.carousel{
-    @include flex();
+
+.carousell{
+    margin-left: 100px;
+    padding: 50px 0;
+    display: grid;
+    grid-auto-flow: column;
     gap: 20px;
+    grid-auto-columns: calc((100% /3) - 20px);
+    overflow: hidden;
+    scroll-behavior: smooth;
+    scrollbar-width: 0;
     .card{
       border-radius: 0%;
         .card-body{
                position: relative;
                 p{
-                    text-decoration: none;
+                    text-decoration: none; 
                     color: black;
                     font-weight: bold;
                     font-family:$work-sans;
@@ -296,4 +304,12 @@
             gap: 5px;
         }
     }
+}
+//--------------------------BLOG SECT END-------------------------------------------------------------------------------------------
+
+//-------------------------FAQ'S SECTION START------------------------------------------------------------------------------------------
+.faq-sect{
+    background-color: #00917c;
+    margin-top: -20rem;
+    padding-top: 20rem;
 }

@@ -13,3 +13,14 @@ arrowBtns.forEach(btn => {
 });
 
 
+const carousell = document.querySelector(".carousell");
+const arrowBtn = document.querySelectorAll(".slider-nav button");
+const firstCard = carousell.querySelector(".card").offsetWidth;
+
+arrowBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
+        carousell.scrollLeft += btn.id === "prev" ? -firstCard : firstCard;
+    });
+});
+
+
