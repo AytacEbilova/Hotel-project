@@ -466,7 +466,7 @@ footer .col-6 .tool .footer-icon li a:hover {
 .faq-sect .row .faq .question h3 {
   font-family: "Work Sans", sans-serif;
   font-size: 16px;
-  padding: 16px 20px;
+  padding: 5px 5px;
 }
 .faq-sect .row .faq .answer {
   max-height: 0;
@@ -489,4 +489,105 @@ footer .col-6 .tool .footer-icon li a:hover {
 }
 .faq-sect .row svg {
   transition: transform 0.5s ease;
+}
+
+.testimonial-sect {
+  background-color: rgb(248, 249, 250);
+  padding: 40px;
+  position: relative;
+}
+.testimonial-sect .cards {
+  margin-left: 100px;
+  padding: 50px 0;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc(33.3333333333% - 12px);
+  gap: 16px;
+  overflow: hidden;
+  scroll-behavior: smooth;
+  scrollbar-width: 0;
+}
+.testimonial-sect .cards .card {
+  height: 300px;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 15px;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.05);
+}
+.testimonial-sect .cards .card .text-content {
+  margin: 0 0 1rem;
+}
+.testimonial-sect .cards .card .text-content p {
+  font-weight: bold;
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.555);
+  margin-left: 20px;
+  line-height: 1.1;
+}
+.testimonial-sect .cards .card span {
+  position: absolute;
+  top: -20px;
+  left: 20px;
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  background-color: #00917c;
+  color: #fff;
+  text-align: center;
+  border-radius: 50%;
+}
+.testimonial-sect .cards .card .author {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}
+.testimonial-sect .cards .card .author .img-container {
+  flex: 0 0 50px;
+  margin-right: 15px;
+  margin-top: 10px;
+}
+.testimonial-sect .cards .card .author .img-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+.testimonial-sect .cards .card .text h3 {
+  color: #000;
+  font-weight: bold;
+}
+.testimonial-sect .cards .card .text p {
+  color: #888;
+}
+.testimonial-sect .prev-next .slider-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+  gap: 5px;
+}
+
+.instagram-sect {
+  height: 30vh;
+}
+.instagram-sect .row .col-lg-3 h2 {
+  font-family: "Work Sans", sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: #00917c;
+  margin: 0 0 8px;
+  padding: 100px 0;
+}
+.instagram-sect .row .col-lg-7 p {
+  font-family: "Roboto", "sans-serif";
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.5);
+  margin: 0 0 16px;
+  padding: 100px 0;
+  font-weight: 400;
+  line-height: 1.2;
 }

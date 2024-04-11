@@ -28,16 +28,28 @@ const faqs = document.querySelectorAll(".faq");
 
 faqs.forEach(faq => {
     faq.addEventListener("click", () => {
-        // Remove "active" class from all faq elements except the clicked one
+       
         faqs.forEach(otherFaq => {
             if (otherFaq !== faq) {
                 otherFaq.classList.remove("active");
             }
         });
 
-        // Toggle "active" class for the clicked faq element
         faq.classList.toggle("active");
     });
 });
 
+//testimonial section
+const cards = document.querySelector(".cards");
+const arrowBtnss = document.querySelectorAll(".slider-nav button"); 
+const firstCards = document.querySelector(".card").offsetWidth;
 
+arrowBtnss.forEach(btn => {
+    btn.addEventListener("click", () => {
+        if (btn.id === "prev") {
+            cards.scrollLeft -= firstCards;
+        } else {
+            cards.scrollLeft += firstCards;
+        }
+    });
+});
