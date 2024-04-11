@@ -1,14 +1,15 @@
 const carousel = document.querySelector(".carousel");
-const arrowBtns = document.querySelectorAll(".slider-nav button"); // Use querySelectorAll to select all matching elements
+const arrowBtns = document.querySelectorAll(".slider-nav button"); 
 const firstCardWidth=carousel.querySelector(".card").offsetWidth;
 arrowBtns.forEach(btn => {
     btn.addEventListener("click", () => {
-        carousel.scrollLeft += btn.id==="prev" ? -firstCardWidth : firstCardWidth;
+        if (btn.id === "prev") {
+            carousel.scrollLeft -= firstCardWidth;
+        }
+         else {
+            carousel.scrollLeft += firstCardWidth;
+        }
     });
 });
 
-// const dragging = (e) => {
-//     carousel.scrollLeft = e.pageX;
-// };
 
-// carousel.addEventListener("mousemove", dragging);
