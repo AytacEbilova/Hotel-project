@@ -23,4 +23,21 @@ arrowBtns.forEach(btn => {
     });
 });
 
+//faqs section
+const faqs = document.querySelectorAll(".faq");
+
+faqs.forEach(faq => {
+    faq.addEventListener("click", () => {
+        // Remove "active" class from all faq elements except the clicked one
+        faqs.forEach(otherFaq => {
+            if (otherFaq !== faq) {
+                otherFaq.classList.remove("active");
+            }
+        });
+
+        // Toggle "active" class for the clicked faq element
+        faq.classList.toggle("active");
+    });
+});
+
 

@@ -440,3 +440,53 @@ footer .col-6 .tool .footer-icon li a:hover {
   margin-top: -20rem;
   padding-top: 20rem;
 }
+.faq-sect .row .col-lg-3 {
+  padding: 80px 0;
+}
+.faq-sect .row .col-lg-3 .faq-h2 {
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: bold;
+  font-family: "Work Sans", sans-serif;
+  color: #000;
+}
+.faq-sect .row .faq {
+  max-width: 700px;
+  margin-top: 2rem;
+  padding-bottom: 1rem;
+  font-weight: normal;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+.faq-sect .row .faq .question {
+  display: flex;
+  justify-content: space-between;
+}
+.faq-sect .row .faq .question h3 {
+  font-family: "Work Sans", sans-serif;
+  font-size: 16px;
+  padding: 16px 20px;
+}
+.faq-sect .row .faq .answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.1s ease;
+  border: none !important;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+.faq-sect .row .faq .answer p {
+  font-size: 14px;
+  font-family: "Roboto", "sans-serif";
+  margin: 0 0 16px;
+}
+.faq-sect .row .faq.active .answer {
+  max-height: 300px;
+}
+.faq-sect .row .faq.active svg {
+  transform: rotate(180deg);
+}
+.faq-sect .row svg {
+  transition: transform 0.5s ease;
+}
