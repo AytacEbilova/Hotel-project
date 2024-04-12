@@ -62,10 +62,42 @@
                         padding: 10px 0;
                     }
                     
-
+                    .contact-icon{
+                        display: flex;
+                        gap: 5px;
+                        padding: 10px 0;
+                        li{
+                            a{
+                                display: inline-block;
+                                width: 30px;
+                                height: 30px;
+                                position: relative;
+                                background: #00917c;
+                                border-radius: 50%;
+                                color: #fff;
+                                font-size: 15px;
+                                i{
+                                    position: absolute;
+                                    top: 30%;
+                                    left: 30%;
+                                    
+                                }
+                            }
+                        }
+                        
+                    }
+                    .contact-a{
+                        color: #00917c;
+                        text-decoration: none;
+                    }
                     }
                     
 
+                }
+
+                .btn{
+                    background-color: #00917c;
+                    color: #fff;
                 }
             }
         }
