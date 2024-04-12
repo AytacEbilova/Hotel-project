@@ -53,3 +53,5 @@ arrowBtnss.forEach(btn => {
         }
     });
 });
+
+

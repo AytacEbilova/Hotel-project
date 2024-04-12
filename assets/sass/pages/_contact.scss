@@ -1,0 +1,73 @@
+#contact-hero-banner{
+    height: 100vh;
+    min-height: 780px;
+    background-image: url('/assets/images/img_4new.jpg');
+    background-position: center;
+    background-size: cover;
+    @include flex();
+    opacity: 100px;
+    h2{
+        font-family: $work-sans;
+        font-size: 50px;
+        color: $color-white;
+        margin: 0 0 8px;
+        font-weight: 700;
+        text-align: center;
+    }
+    p{
+        font-size: 14px;
+        font-family: $robote;
+        color:rgba(255, 255, 255, 0.5) ;
+        text-align: center;
+        
+}
+}
+.get-in-touch{
+    .col-lg-3{
+        padding: 80px 0;
+            .contact-h2{
+                font-family: $work-sans;
+                font-size: 24px;
+                font-weight: bold;
+                color: #00917c;
+                margin: 0 0 8px;
+            }
+        }
+        .col-lg-7{
+        padding: 80px 0;
+            .contact-p{
+                font-family: $robote;
+                font-size: 14px; 
+                color: rgba(0, 0, 0, 0.5);
+                margin: 0 0 16px;
+                font-weight: 400;
+                line-height: 1.2;
+            }
+        }
+        form{
+            .row{
+                .col-6{
+                    .bottom-sect-h3{
+                        font-weight: 700;
+                        color: #52565e;
+                        font-size: 1rem;
+                    }
+                    .bottom-sect-p{
+                        margin-top: 0;
+                        margin-bottom: 1rem;
+                        color: rgba(0, 0, 0, 0.5);
+                        font-family: "Roboto", sans-serif;
+                        font-weight: 400;
+                        font-size: 14px;
+                        padding: 10px 0;
+                    }
+                    
+
+                    }
+                    
+
+                }
+            }
+        }
+
+    

@@ -370,10 +370,33 @@
 //--------------------------TESTIMONIALS SECTION START------------------------------------------------------------------------------------------
  .testimonial-sect{
     background-color: $primary-gray;
-    padding: 40px;
+    padding: 40px 0;
     position: relative;
+    .row{
+        padding: 30px 0;
+        .col-lg-3{
+           
+            h2{
+                font-family: $work-sans;
+                font-size: 24px;
+                font-weight: bold;
+                color: $color-green;
+                margin: 0 0 8px;
+            }
+        }
+        .col-lg-7{
+            p{
+                font-family: $robote;
+                font-size: 14px; 
+                color: rgba(0, 0, 0, 0.5);
+                margin: 0 0 16px;
+                font-weight: 400;
+                line-height: 1.2;
+
+            }
+        }
+    }
     .cards{
-        margin-left: 100px;
         padding: 50px 0;
         display: grid;
         grid-auto-flow: column;
@@ -392,7 +415,7 @@
             box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.05);
             .text-content{
                 margin: 0 0 1rem;
-                p{
+                #home-p{
                     font-weight: bold;
                     font-size: 18px;
                     color: rgba(0, 0, 0, 0.555);
@@ -424,10 +447,8 @@
                      margin-top: 10px;
                     img{
                         max-width: 100%;
-                        height: auto;
                         border-radius: 50%;
                     }
-
                 }
             }
             .text{

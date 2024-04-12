@@ -1,53 +1,24 @@
-// .services-text{
-//     font-family:$work-sans;
-//     font-weight: bold;
-//     color: $color-green;
-//     font-size: 24px;
-//     text-transform: uppercase;
-// }
-
-// .sliders{
-//     .carousel{
-//         display: flex;
-//         justify-content: center;
-//         align-items: center;
-//         padding: 50px 0;
-//         gap: 20px;
-    
-//     .card{
-//         width: 100%;
-//         padding-left: 30px;
-//         padding-right: 30px;
-//         .img{
-//             img{
-//                 width:60px;
-//                 height: 60px;
-//                 object-fit: cover;
-//             }
-//         }
+#service-hero-banner{
+    height: 100vh;
+    min-height: 780px;
+    background-image: url('/assets/images/img_3new.jpg');
+    background-position: center;
+    background-size: cover;
+    @include flex();
+    opacity: 100px;
+    h2{
+        font-family: $work-sans;
+        font-size: 50px;
+        color: $color-white;
+        margin: 0 0 8px;
+        font-weight: 700;
+        text-align: center;
+    }
+    p{
+        font-size: 14px;
+        font-family: $robote;
+        color:rgba(255, 255, 255, 0.5) ;
+        text-align: center;
         
-//         a{
-//             text-decoration: none;
-//             color: $bg-gray;
-//             padding-bottom: 10px;
-//         }
-//         a:hover{
-//             color: $bg-dark;
-            
-//         }
-//         .slide-h2{
-//             font-size: 20px;
-//             font-weight: bold;
-//             font-family:$work-sans;
-//             color: $bg-dark;
-//             padding: 10px 0;
-//         }
-//         p{
-//             color: rgba(0, 0, 0, 0.5);
-//             margin-top: 0;
-//             margin-bottom: 1rem;
-//             padding: 15px 0;
-//         }
-//     }
-// }
-// }
+    }
+}

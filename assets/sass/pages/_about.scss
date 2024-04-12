@@ -1,0 +1,71 @@
+#about-hero-banner {
+    height: 100vh;
+    min-height: 780px;
+    background-image: url('/assets/images/img_3new.jpg');
+    background-position: center;
+    background-size: cover;
+    @include flex();
+    opacity: 100px;
+
+    h2 {
+        font-family: $work-sans;
+        font-size: 50px;
+        color: $color-white;
+        margin: 0 0 8px;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    p {
+        font-size: 14px;
+        font-family: $robote;
+        color: rgba(255, 255, 255, 0.5);
+        text-align: center;
+
+    }
+
+}
+
+//testimonials section
+.about-author {
+    .img-container {
+        img {
+            max-width: 100%;
+            border-radius: 50%;
+            width: 50%;
+            margin: 0 0 20px;
+        }
+    }
+    #about-h3{
+        font-size: 20px;
+        font-weight: bold;
+        font-family: $work-sans;
+        padding: 10px 0;
+    }
+}
+
+.text-content {
+    display: flex;
+    flex-direction: column;
+
+    #about-p {
+        font-size: 14px;
+        color: rgba(0, 0, 0, 0.5);
+        margin-left: 30px;
+        padding: 10px 0;
+        font-family: $robote;
+
+    }
+
+    .about-a {
+        text-decoration: none;
+        color: gray;
+        margin-left: 30px;
+        padding: 10px 0;
+        margin-top: auto;
+
+        &:hover {
+            color: black;
+        }
+    }
+}
