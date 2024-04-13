@@ -21,6 +21,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
+
     <!-- custom css -->
     <link rel="stylesheet" href="./assets/css/main.css">
     <title>Document</title>
@@ -45,6 +46,7 @@
                     <a id="number" href="tel:123-489-9381">
                         <span id="phone-icon"><i class="fa-solid fa-phone"></i></span>
                         <span id="phone-text">123-489-9381</span>
+                        <span id="bars"><i class="fa-solid fa-bars"></i></span>
                     </a>
                 </div>
             </div>
@@ -65,8 +67,11 @@
     </section>
     <section class="video-section">
         <span id="close-btn">X</span>
-        <iframe src="https://www.youtube.com/embed/9I2xta0ahIs?si=-jESfq3K7xv1P39H" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
+        <iframe src="https://www.youtube.com/embed/9I2xta0ahIs?si=-jESfq3K7xv1P39H" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
         </div>
     </section>
     <!-- HERO BANNER END -->
@@ -77,11 +82,18 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="form">
-                        <div class="col-lg-6"><input type="search" class="form-control searchInput" placeholder="Search"
-                                aria-label="Search"><button class="btn btn-primary button" type="submit">Find
-                                Now</button></div>
-                        <div class="col-lg-6"><button class="btn btn-primary btn-lg searchButton" type="submit">Show
-                                All</button></div>
+                        <div class="col-lg-6">
+                            <input type="search" class="form-control searchInput" placeholder="Search"
+                                aria-label="Search" id="search-input">
+                            <button class="btn btn-primary button" type="submit" id="find-now-btn">
+                                Find Now
+                            </button>
+                        </div>
+                        <div class="col-lg-6">
+                            <button class="btn btn-primary btn-lg searchButton" type="submit" id="show-all-btn">
+                                Show All
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -93,60 +105,47 @@
     <div class="slide-container">
         <div class="services-text">
             <h3>OUR SERVICES</h3>
+            <button class="btn btn-primary" id="add-service-btn">Add Service</button>
+            <select id="sort-select">
+                <a href="">
+                    <option value="az">A-Z</option>
+                    <option value="za">Z-A</option>
+                </a>
+            </select>
         </div>
         <div class="sliders">
-            <ul class="carousel">
-                <li class="card">
-                    <div class="img"><img src="./assets/images//Screenshot 2024-04-10 183744.png" alt="">
-                    </div>
-                    <h2 class="slide-h2">Trekking</h2>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-                        there live the blind texts.</p>
-                    <a href="">Read More</a>
-                </li>
-                <li class="card">
-                    <div class="img"><img src="./assets/images/Screenshot 2024-04-10 183759.png" alt="">
-                    </div>
-                    <h2 class="slide-h2">The Map</h2>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-                        there live the blind texts.</p>
-                    <a href="">Read More</a>
-                </li>
-                <li class="card">
-                    <div class="img"><img src="./assets/images/Screenshot 2024-04-10 183808.png" alt=""></div>
-                    <h2 class="slide-h2">Suitcase</h2>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-                        there live the blind texts.</p>
-                    <a href="">Read More</a>
-                </li>
+            <ul class="carousel" id="carousel">
 
-                <li class="card">
-                    <div class="img"> <img src="./assets/images/Screenshot 2024-04-10 184725.png" alt=""></div>
-                    <h2 class="slide-h2">Island Hoping</h2>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-                        there live the blind texts.</p>
-                    <a href="">Read More</a>
-                </li>
 
-                <li class="card">
-                    <div class="img"><img src="./assets/images/Screenshot 2024-04-10 184822.png" alt="">
-                    </div>
-                    <h2 class="slide-h2">World Round </h2>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-                        there live the blind texts.</p>
-                    <a href="">Read More</a>
-                </li>
-                <li class="card">
-                    <div class="img"><img src="./assets/images//Screenshot 2024-04-10 184844.png" alt="">
-                    </div>
-                    <h2 class="slide-h2">Travel With Plane</h2>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-                        there live the blind texts.</p>
-                    <a href="">Read More</a>
-                </li>
+
             </ul>
         </div>
     </div>
+
+    <div id="custom-modal">
+            <form id="custom-add-service-form">
+                <input type="text" id="custom-title" name="title" placeholder="Title" >
+                <input type="text" id="custom-icon" name="icon" placeholder="Icon URL">
+                <textarea id="custom-content" placeholder="Content" ></textarea>
+                <div class="buttons" style="display: flex;justify-content: space-between;">
+                    <button type="submit" id="confirm-add-service-btn">Add</button>
+                    <button type="submit" id="cancel-service-btn">Cancel</button>
+                </div>
+                <span id="add-info-message" style="display: block; color: red;text-align: center;padding-top: 15px; font-size: 18px;font-weight: bold;"></span>
+            </form>
+    </div>
+
+    <div id="custom-read-more-modal">
+        <div class="modal-content">
+            <div class="img-container">
+                <img src="" alt="" id="read-more-image">
+            </div>
+            <h2 id="read-more-title"></h2>
+            <p id="read-more-content"></p>
+            <button type="submit" id="cancel-modal-btn">Cancel</button>
+        </div>
+    </div>
+
     <section class="prev-next-btn">
         <div class="container">
             <div class="row">
@@ -191,18 +190,9 @@
         <div class="services-text">
             <h3 style="padding: 60px 0;">BLOG POSTS</h3>
         </div>
-        <div class="carousell">
-            <div class="card" style="width: 22rem;">
-                <img class="card-img-top" src="./assets/images/img_1.jpg.webp" alt="Card image cap">
-                <div class="card-body">
-                    <span><i class="fa-solid fa-pen"></i></span>
-                    <p class="card-title p">
-                        Far far away, behind the word mountains, far from the countries
-                    </p>
-                    <a href="" class="slide-a">Read More</a>
-                </div>
-            </div>
-            <div class="card" style="width: 22rem;">
+        <div class="carousell" id="blog-carousel">
+
+            <!-- <div class="card" style="width: 22rem;">
                 <img class="card-img-top" src="./assets/images/img_2 (1).jpg" alt="Card image cap">
                 <div class="card-body">
                     <span><i class="fa-solid fa-pen"></i></span>
@@ -251,9 +241,20 @@
                     </p>
                     <a href="" class="slide-a">Read More</a>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
+
+    <div id="edit-modal">
+        <form id="edit-form">
+            <input type="text" id="edit-title" name="title" placeholder="Title" >
+            <input type="text" id="edit-img" name="img" placeholder="Img URL">
+            <div class="buttons" style="display: flex;justify-content: space-between;">
+                <button type="submit" id="edit-btn">Edit</button>
+            </div>
+        </form>
+</div>
+
     <section class="prev-next">
         <div class="container">
             <div class="row">
@@ -570,9 +571,17 @@
         </div>
     </footer>
     <!-- FOOTER SECTION END -->
+    <!-- moment-js cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+
     <script src="./assets/js/slider.js"></script>
     <script src="./assets/js/modal.js"></script>
-    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/classes.js"></script>
+    <script src="./assets/js/main.js" ></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+
 </body>
 
 </html>

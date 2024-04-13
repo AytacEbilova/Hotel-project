@@ -1,6 +1,10 @@
 const carousel = document.querySelector(".carousel");
 const arrowBtns = document.querySelectorAll(".slider-nav button"); 
-const firstCardWidth=carousel.querySelector(".card").offsetWidth;
+let firstCardWidth;
+document.addEventListener("DOMContentLoaded", ()=>{
+    firstCardWidth=carousel.querySelector(".card").offsetWidth;
+});
+
 arrowBtns.forEach(btn => {
     btn.addEventListener("click", () => {
         if (btn.id === "prev") {
@@ -15,7 +19,10 @@ arrowBtns.forEach(btn => {
 
 const carousell = document.querySelector(".carousell");
 const arrowBtn = document.querySelectorAll(".slider-nav button");
-const firstCard = carousell.querySelector(".card").offsetWidth;
+let firstCard;
+document.addEventListener("DOMContentLoaded", ()=>{
+    firstCard=carousel.querySelector(".card").offsetWidth;
+});
 
 arrowBtns.forEach(btn => {
     btn.addEventListener("click", () => {
@@ -42,7 +49,10 @@ faqs.forEach(faq => {
 //testimonial section
 const cards = document.querySelector(".cards");
 const arrowBtnss = document.querySelectorAll(".slider-nav button"); 
-const firstCards = document.querySelector(".card").offsetWidth;
+let firstCards;
+document.addEventListener("DOMContentLoaded", ()=>{
+    firstCards=carousel.querySelector(".card").offsetWidth;
+});
 
 arrowBtnss.forEach(btn => {
     btn.addEventListener("click", () => {

@@ -61,6 +61,9 @@ header {
                 background-color: rgba(255, 255, 255, 0.212);
                 border-radius: 50%;
             }
+            .fa-bars{
+                display: none;
+            }
 
         }
 
@@ -91,9 +94,100 @@ header {
                 .fa-phone{
                     background-color: rgba(0, 0, 0, 0.339);
                 }
-                
             }
         }
         
+    }
+}
+@media screen and (max-width: 767px) {
+    header {
+        .container {
+            flex-direction: column;
+
+            .header {
+                align-items: flex-start;
+                width: 100%;
+
+                .hotel {
+                    margin-bottom: 20px;
+                }
+
+                nav {
+                    ul {
+                        flex-direction: column;
+                        gap: 5px;
+
+                        li {
+                            display: none;
+                            a {
+                                padding: 8px;
+    
+                            }
+                        }
+                    }
+                }
+
+                .menu-top-right {
+                    margin-top: 10px;
+                    a{
+                        #phone-text{
+                            display: none;
+                        }
+                        .fa-phone{
+                            display: none;
+                        }
+                        .fa-bars{
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px){
+    header {
+        .container {
+            flex-direction: column;
+
+            .header {
+                align-items: flex-start;
+                width: 100%;
+
+                .hotel {
+                    margin-bottom: 20px;
+                }
+
+                nav {
+                    ul {
+                        flex-direction: column;
+                        gap: 5px;
+
+                        li {
+                            display: none;
+                            a {
+                                padding: 8px;
+    
+                            }
+                        }
+                    }
+                }
+
+                .menu-top-right {
+                    margin-top: 10px;
+                    a{
+                        #phone-text{
+                            display: none;
+                        }
+                        .fa-phone{
+                            display: none;
+                        }
+                        .fa-bars{
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
     }
 }

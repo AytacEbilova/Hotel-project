@@ -45,7 +45,9 @@
                     <a id="number" href="tel:123-489-9381">
                         <span id="phone-icon"><i class="fa-solid fa-phone"></i></span>
                         <span id="phone-text">123-489-9381</span>
+                       
                     </a>
+                  
                 </div>
             </div>
     </header>
@@ -69,11 +71,18 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="form">
-                        <div class="col-lg-6"><input type="search" class="form-control searchInput" placeholder="Search"
-                                aria-label="Search"><button class="btn btn-primary button" type="submit">Find
-                                Now</button></div>
-                        <div class="col-lg-6"><button class="btn btn-primary btn-lg searchButton" type="submit">Show
-                                All</button></div>
+                        <div class="col-lg-6">
+                            <input type="search" class="form-control searchInput" placeholder="Search"
+                                aria-label="Search" id="search-input">
+                            <button class="btn btn-primary button" type="submit" id="find-now-btn">
+                                Find Now
+                            </button>
+                        </div>
+                        <div class="col-lg-6">
+                            <button class="btn btn-primary btn-lg searchButton" type="submit" id="show-all-btn">
+                                Show All
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -85,58 +94,17 @@
     <div class="slide-container">
         <div class="services-text">
             <h3>OUR SERVICES</h3>
+            <button class="btn btn-primary" id="add-service-btn">Add Service</button>
+        <select id="sort-select">
+            <option value="az">A-Z</option>
+            <option value="za">Z-A</option>
+        </select>
         </div>
         <div class="sliders">
-            <ul class="carousel">
-                <li class="card">
-                    <div class="img"><img src="./assets/images//Screenshot 2024-04-10 183744.png" alt="">
-                    </div>
-                    <h2 class="slide-h2">Trekking</h2>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-                        there live the blind texts.</p>
-                    <a href="">Read More</a>
-                </li>
-                <li class="card">
-                    <div class="img"><img src="./assets/images/Screenshot 2024-04-10 183759.png" alt="">
-                    </div>
-                    <h2 class="slide-h2">The Map</h2>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-                        there live the blind texts.</p>
-                    <a href="">Read More</a>
-                </li>
-                <li class="card">
-                    <div class="img"><img src="./assets/images/Screenshot 2024-04-10 183808.png" alt=""></div>
-                    <h2 class="slide-h2">Suitcase</h2>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-                        there live the blind texts.</p>
-                    <a href="">Read More</a>
-                </li>
+            <ul class="carousel" id="carousel">
 
-                <li class="card">
-                    <div class="img"> <img src="./assets/images/Screenshot 2024-04-10 184725.png" alt=""></div>
-                    <h2 class="slide-h2">Island Hoping</h2>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-                        there live the blind texts.</p>
-                    <a href="">Read More</a>
-                </li>
 
-                <li class="card">
-                    <div class="img"><img src="./assets/images/Screenshot 2024-04-10 184822.png" alt="">
-                    </div>
-                    <h2 class="slide-h2">World Round </h2>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-                        there live the blind texts.</p>
-                    <a href="">Read More</a>
-                </li>
-                <li class="card">
-                    <div class="img"><img src="./assets/images//Screenshot 2024-04-10 184844.png" alt="">
-                    </div>
-                    <h2 class="slide-h2">Travel With Plane</h2>
-                    <p>Far far away, behind the word mountains, far  from the countries Vokalia and <br>
-                         Consonantia,
-                        there live the blind texts</p>
-                    <a href="">Read More</a>
-                </li>
+
             </ul>
         </div>
     </div>
@@ -264,8 +232,11 @@
         </div>
     </footer>
     <!-- FOOTER SECTION END -->   
+     <!-- moment-js cdn -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
     <script src="./assets/js/slider.js"></script>
     <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/classes.js"></script>
 </body>
 
 </html>
