@@ -6,11 +6,9 @@ document.addEventListener("scroll", () => {
     else {
         header.classList.remove("scrolled");
     }
-})
+});
 
 //our services
-
-
 
 let services = [];
 services.push(new card("Trekking", "Far far away, behind the word mountains", "./assets/images/Screenshot%202024-04-10%20183744.png"));
@@ -23,7 +21,7 @@ let cardsSection = document.getElementById('carousel');
 let deleteServiceBtn = document.querySelectorAll('delete-service-btn');
 let readMoreBtns = document.querySelectorAll('.read-more');
 
-ShowServices();
+
 function SetBtns() {
     deleteServiceBtn = document.querySelectorAll('.delete-service-btn');
     deleteServiceBtn.forEach((btn) => {
@@ -61,9 +59,9 @@ function SetBtns() {
         });
     });
 }
-function CancelModal(){
+function CancelModal() {
     let CustomReadMoreModal = document.getElementById('custom-read-more-modal');
-    CustomReadMoreModal.style.display='none';
+    CustomReadMoreModal.style.display = 'none';
 }
 
 
@@ -195,26 +193,26 @@ selectElement.addEventListener("change", function (event) {
 
 
 //blog post section start
-let posts=[];
- 
-posts.push(new blogPost("Far far away, behind the word mountains, far from the countries","./assets/images/img_1.jpg.webp"));
-posts.push(new blogPost("Far far away, behind the word mountains, far from the countries","./assets/images/img_2%20(1).jpg"));
-posts.push(new blogPost("Far far away, behind the word mountains, far from the countries","./assets/images/img_3.jpg"));
-posts.push(new blogPost("Far far away, behind the word mountains, far from the countries","./assets/images/img_4.jpg"));
-posts.push(new blogPost("Far far away, behind the word mountains, far from the countries","./assets/images/img_1.jpg.webp"));
-posts.push(new blogPost("Far far away, behind the word mountains, far from the countries","./assets/images/img_3.jpg"));
+let posts = [];
+
+posts.push(new blogPost("Far far away, behind the word mountains, far from the countries", "./assets/images/img_1.jpg.webp"));
+posts.push(new blogPost("Far far away, behind the word mountains, far from the countries", "./assets/images/img_2%20(1).jpg"));
+posts.push(new blogPost("Far far away, behind the word mountains, far from the countries", "./assets/images/img_3.jpg"));
+posts.push(new blogPost("Far far away, behind the word mountains, far from the countries", "./assets/images/img_4.jpg"));
+posts.push(new blogPost("Far far away, behind the word mountains, far from the countries", "./assets/images/img_1.jpg.webp"));
+posts.push(new blogPost("Far far away, behind the word mountains, far from the countries", "./assets/images/img_3.jpg"));
 
 
-let blogCarousel=document.getElementById('blog-carousel')
+let blogCarousel = document.getElementById('blog-carousel')
 
 function ShowBlogs() {
-    blogCarousel.innerHTML='';
-    posts.forEach((item)=>{
-        blogCarousel.innerHTML+=`
+    blogCarousel.innerHTML = '';
+    posts.forEach((item) => {
+        blogCarousel.innerHTML += `
         <div class="card" style="width: 22rem;">
         <img class="card-img-top" src=${item.imgSrc}>
         <div class="card-body">
-            <span><i class="fa-solid fa-pen"></i></span>
+            <span onclick="EditBlog(${item.Id})"><i class="fa-solid fa-pen"></i></span>
             <p class="card-title p">
                 ${item.title}
             </p>
@@ -224,4 +222,39 @@ function ShowBlogs() {
         `
     });
 };
-ShowBlogs();
+let clickedBlog;
+function EditBlog(id) {
+    let index = posts.findIndex(post => post.Id == id);
+    clickedBlog = posts[index];
+    let editModal = document.getElementById('edit-modal');
+    editModal.style.display = 'block';
+    let editTitle = document.getElementById('edit-title');
+    let editImg = document.getElementById('edit-img');
+    console.log(clickedBlog);
+    editTitle.value = clickedBlog.title;
+    editImg.src = clickedBlog.imgSrc;
+}
+
+let blogCancelbtn = document.getElementById('cancel-btn');
+blogCancelbtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    let editModal = document.getElementById('edit-modal');
+    editModal.style.display = 'none';
+});
+
+let blogEditBtn  =document.getElementById('edit-btn');
+blogEditBtn.addEventListener('click',(e)=>{
+    e.preventDefault();
+    let editTitle = document.getElementById('edit-title');
+    console.log(editTitle.value.trim().length);
+    if(editTitle.value.trim().length>0){
+        clickedBlog.title = editTitle.value;
+        let editModal = document.getElementById('edit-modal');
+        editModal.style.display = 'none';
+        ShowBlogs();
+    }
+    else{
+        let editInfoMessage=  document.getElementById('edit-info-message');
+        editInfoMessage.innerHTML = `Title can't be empty`;
+    }
+});

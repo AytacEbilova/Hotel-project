@@ -556,6 +556,62 @@ footer .col-6 .tool .footer-icon li a:hover {
   font-family: "Roboto", "sans-serif";
 }
 
+#edit-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.2);
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+#edit-modal #edit-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  position: absolute;
+  top: 50%;
+  width: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#edit-modal #edit-form input {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+#edit-modal #edit-form #edit-btn {
+  width: 45%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#edit-modal #edit-form #edit-btn:hover {
+  background-color: #0056b3;
+}
+#edit-modal #edit-form #cancel-btn {
+  width: 45%;
+  padding: 10px;
+  background-color: #ff1e00;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#edit-modal #edit-form #cancel-btn:hover {
+  background-color: #c40202;
+}
+
 @media screen and (max-width: 900px) {
   .sliders .carousel {
     grid-auto-columns: calc(50% - 9px);
