@@ -3,6 +3,7 @@ ShowServices();
 
 ShowBlogs();
 
-//ShowFAQs();
+ShowFaqs();
 
-//ShowEmployees();
+ShowEmployees();
+

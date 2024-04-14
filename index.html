@@ -82,14 +82,14 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="form">
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 col-sm-6">
                             <input type="search" class="form-control searchInput" placeholder="Search"
                                 aria-label="Search" id="search-input">
                             <button class="btn btn-primary button" type="submit" id="find-now-btn">
                                 Find Now
                             </button>
                         </div>
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 col-sm-6">
                             <button class="btn btn-primary btn-lg searchButton" type="submit" id="show-all-btn">
                                 Show All
                             </button>
@@ -103,6 +103,7 @@
 
     <!-- OUR-SERVICES START -->
     <div class="slide-container">
+        <div class="container">
         <div class="services-text">
             <h3>OUR SERVICES</h3>
             <button class="btn btn-primary" id="add-service-btn">Add Service</button>
@@ -117,22 +118,23 @@
             <ul class="carousel" id="carousel">
 
 
-
             </ul>
+          </div>
         </div>
     </div>
 
     <div id="custom-modal">
-            <form id="custom-add-service-form">
-                <input type="text" id="custom-title" name="title" placeholder="Title" >
-                <input type="text" id="custom-icon" name="icon" placeholder="Icon URL">
-                <textarea id="custom-content" placeholder="Content" ></textarea>
-                <div class="buttons" style="display: flex;justify-content: space-between;">
-                    <button type="submit" id="confirm-add-service-btn">Add</button>
-                    <button type="submit" id="cancel-service-btn">Cancel</button>
-                </div>
-                <span id="add-info-message" style="display: block; color: red;text-align: center;padding-top: 15px; font-size: 18px;font-weight: bold;"></span>
-            </form>
+        <form id="custom-add-service-form">
+            <input type="text" id="custom-title" name="title" placeholder="Title">
+            <input type="text" id="custom-icon" name="icon" placeholder="Icon URL">
+            <textarea id="custom-content" placeholder="Content"></textarea>
+            <div class="buttons" style="display: flex;justify-content: space-between;">
+                <button type="submit" id="confirm-add-service-btn">Add</button>
+                <button type="submit" id="cancel-service-btn">Cancel</button>
+            </div>
+            <span id="add-info-message"
+                style="display: block; color: red;text-align: center;padding-top: 15px; font-size: 18px;font-weight: bold;"></span>
+        </form>
     </div>
 
     <div id="custom-read-more-modal">
@@ -187,27 +189,30 @@
 
     <!-- BLOG-POST SECTION START -->
     <div class="slide-container">
+        <div class="container">
         <div class="services-text">
             <h3 style="padding: 60px 0;">BLOG POSTS</h3>
         </div>
         <div class="carousell" id="blog-carousel">
 
-         
+
         </div>
-    </div>
+   
 
     <div id="edit-modal">
         <form id="edit-form">
-            <input type="text" id="edit-title" name="title" placeholder="Title" >
+            <input type="text" id="edit-title" name="title" placeholder="Title">
             <img id="edit-img" src="" style="max-width: 300px;">
             <div class="buttons" style="display: flex;justify-content: space-between;">
                 <button type="submit" id="edit-btn">Edit</button>
                 <button type="submit" id="cancel-btn">Cancel</button>
             </div>
-            <span id="edit-info-message" style="display: block; color: red;text-align: center;padding-top: 15px; font-size: 18px;font-weight: bold;"></span>
+            <span id="edit-info-message"
+                style="display: block; color: red;text-align: center;padding-top: 15px; font-size: 18px;font-weight: bold;"></span>
         </form>
+    </div>
+    </div>
 </div>
-
     <section class="prev-next">
         <div class="container">
             <div class="row">
@@ -218,7 +223,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div>    
     </section>
     <!-- BLOG-POST SECTION END -->
 
@@ -229,68 +234,8 @@
                 <div class="col-lg-3">
                     <h2 class="faq-h2">Frequently Asked Questions</h2>
                 </div>
-                <div class="col-lg-8">
-                    <div class="faq">
-                        <div class="question">
-                            <h3>Is it free?</h3>
-                            <svg width="15" height="10" viewBox="0 0 42 25">
-                                <path d="M3 3L21 21L39 3" stroke-width="7" stroke-linecap="round" />
-                            </svg>
-                        </div>
-                        <div class="answer">
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-                                there live the blind texts. Separated they live in Bookmarksgrove right at the coast of
-                                the
-                                Semantics, a large language ocean.</p>
-                            <br>
-                            <p>A small river named Duden flows by their place and supplies it with the necessary
-                                regelialia.
-                                It is a paradisematic country, in which roasted parts of sentences fly into your mouth.
-                            </p>
-                        </div>
-                    </div>
+                <div class="col-lg-8" id="faqs-accordion">
 
-                    <div class="faq">
-                        <div class="question">
-                            <h3>
-                                How to install this template?</h3>
-                            <svg width="15" height="10" viewBox="0 0 42 25">
-                                <path d="M3 3L21 21L39 3" stroke-width="7" stroke-linecap="round" />
-                            </svg>
-                        </div>
-                        <div class="answer">
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-                                there live the blind texts. Separated they live in Bookmarksgrove right at the coast of
-                                the
-                                Semantics, a large language ocean.</p>
-                            <br>
-                            <p>A small river named Duden flows by their place and supplies it with the necessary
-                                regelialia.
-                                It is a paradisematic country, in which roasted parts of sentences fly into your mouth.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="faq">
-                        <div class="question">
-                            <h3>
-                                Where can i get help?</h3>
-                            <svg width="15" height="10" viewBox="0 0 42 25">
-                                <path d="M3 3L21 21L39 3" stroke-width="7" stroke-linecap="round" />
-                            </svg>
-                        </div>
-                        <div class="answer">
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-                                there live the blind texts. Separated they live in Bookmarksgrove right at the coast of
-                                the
-                                Semantics, a large language ocean.</p>
-                            <br>
-                            <p>A small river named Duden flows by their place and supplies it with the necessary
-                                regelialia.
-                                It is a paradisematic country, in which roasted parts of sentences fly into your mouth.
-                            </p>
-                        </div>
-                    </div>
 
                 </div>
             </div>
@@ -305,128 +250,18 @@
                 <div class="col-lg-3">
                     <h2>TESTIMONIALS</h2>
                 </div>
-                <div class="col-lg-7">
+                <div class="col-lg-6">
                     <p>
                         A small river named Duden flows by their place and supplies it with the necessary regelialia. It
                         is a paradisematic country, in which roasted parts of sentences fly into your mouth
                     </p>
                 </div>
+                <div class="col-lg-3">
+                    <button id="AddEmployeeBtn" class="btn btn-success" style="border: 1px solid black; width: 50%;">Add</button>
+                </div>
             </div>
-            <div class="cards">
-                <div class="card" style="width: 18rem;">
-                    <span><i class="fa-solid fa-quote-left"></i></span>
-                    <div class="text-content">
-                        <p id="home-p">A small river named Duden flows by their place and supplies it with the necessary
-                            regelialia.
-                            It is a
-                            paradisematic country, in which roasted parts of sentences fly into your mouth.
-                        </p>
-                    </div>
-                    <div class="author">
-                        <div class="img-container">
-                            <img src="./assets/images/person_1.jpg" alt="">
-                        </div>
-                        <div class="text">
-                            <h3>John Doe</h3>
-                            <p>Creative Director</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="card" style="width: 18rem;">
-                    <span><i class="fa-solid fa-quote-left"></i></span>
-                    <div class="text-content">
-                        <p id="home-p">A small river named Duden flows by their place and supplies it with the necessary
-                            regelialia.
-                            It is a
-                            paradisematic country, in which roasted parts of sentences fly into your mouth.
-                        </p>
-                    </div>
-                    <div class="author">
-                        <div class="img-container">
-                            <img src="./assets/images/person_2.jpg" alt="">
-                        </div>
-                        <div class="text">
-                            <h3>John Doe</h3>
-                            <p>Creative Director</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="card" style="width: 18rem;">
-                    <span><i class="fa-solid fa-quote-left"></i></span>
-                    <div class="text-content">
-                        <p id="home-p">A small river named Duden flows by their place and supplies it with the necessary
-                            regelialia.
-                            It is a
-                            paradisematic country, in which roasted parts of sentences fly into your mouth.
-                        </p>
-                    </div>
-                    <div class="author">
-                        <div class="img-container">
-                            <img src="./assets/images/person_3.jpg" alt="">
-                        </div>
-                        <div class="text">
-                            <h3>John Doe</h3>
-                            <p>Creative Director</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="card" style="width: 18rem;">
-                    <span><i class="fa-solid fa-quote-left"></i></span>
-                    <div class="text-content">
-                        <p id="home-p">A small river named Duden flows by their place and supplies it with the necessary
-                            regelialia.
-                            It is a
-                            paradisematic country, in which roasted parts of sentences fly into your mouth.
-                        </p>
-                    </div>
-                    <div class="author">
-                        <div class="img-container">
-                            <img src="./assets/images/person_4.jpg" alt="">
-                        </div>
-                        <div class="text">
-                            <h3>John Doe</h3>
-                            <p>Creative Director</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="card" style="width: 18rem;">
-                    <span><i class="fa-solid fa-quote-left"></i></span>
-                    <div class="text-content">
-                        <p id="home-p">A small river named Duden flows by their place and supplies it with the necessary
-                            regelialia.
-                            It is a
-                            paradisematic country, in which roasted parts of sentences fly into your mouth.
-                        </p>
-                    </div>
-                    <div class="author">
-                        <div class="img-container">
-                            <img src="./assets/images/person_1.jpg" alt="">
-                        </div>
-                        <div class="text">
-                            <h3>John Doe</h3>
-                            <p>Creative Director</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="card" style="width: 18rem;">
-                    <span><i class="fa-solid fa-quote-left"></i></span>
-                    <div class="text-content">
-                        <p id="home-p">A small river named Duden flows by their place and supplies it with the necessary
-                            regelialia.
-                            It is a
-                            paradisematic country, in which roasted parts of sentences fly into your mouth.
-                        </p>
-                    </div>
-                    <div class="author">
-                        <div class="img-container">
-                            <img src="./assets/images/person_2.jpg" alt="">
-                        </div>
-                        <div class="text">
-                            <h3>John Doe</h3>
-                            <p>Creative Director</p>
-                        </div>
-                    </div>
-                </div>
+            <div class="cards" id="employees">
+             
             </div>
             <div class="prev-next">
                 <div class="slider-nav">
@@ -435,6 +270,21 @@
                 </div>
             </div>
         </div>
+    </div>
+
+    <div id="AddEmplyoeeModal">
+        <form class="modal-content">
+            <input type="text" id="employeeFullname" placeholder="Fullname">
+            <input type="text" id="employeePosition" placeholder="Position">
+            <textarea type="text" id="employeeComment" placeholder="Comment"></textarea>
+            <input type="text" id="employeeImgSrc" placeholder="Image Source">
+            <div class="buttons">
+                <button id="ConfirmAddEmployee">Add</button>
+                <button id="CancelAddEmployee">Cancel</button>
+            </div>
+            <span id="add-employee-info-message" style="display: block; color: red;text-align: center;padding-top: 15px; font-size: 18px;font-weight: bold;"> 
+            </span>
+        </form>
     </div>
     <!-- TESTIMONIALS SECTION END -->
 
@@ -452,15 +302,26 @@
                     </p>
                 </div>
             </div>
-            <div class="istagram-slider">
-
+        </div>
+        <div class="instagram-slider">
+            <div id="instagramSlider" class="instagram-slider" class="img-container"
+                style="display: flex;justify-content: space-between;margin: 0;padding: 0;">
+                <img src="./assets/images/img_1.jpg" style="width: 20%" alt="">
+                <img src="./assets/images/img_2.jpg" style="width: 20%" alt="">
+                <img src="./assets/images/img_3.jpg" style="width: 20%" alt="">
+                <img src="./assets/images/img_4.jpg" style="width: 20%" alt="">
+                <img src="./assets/images/img_1.jpg" style="width: 20%" alt="">
+                <img src="./assets/images/img_2.jpg" style="width: 20%" alt="">
+                <img src="./assets/images/img_3.jpg" style="width: 20%" alt="">
             </div>
         </div>
+        
     </section>
     <!-- INSTAGRAM SECTION END -->
 
     <!-- FOOTER SECTION START-->
     <footer>
+        <section class="footer">
         <div class="container">
             <div class="row">
                 <div class="col-6 col-sm-6 col-md-6 col-lg-3">
@@ -522,6 +383,7 @@
                 </div>
             </div>
         </div>
+    </section>
     </footer>
     <!-- FOOTER SECTION END -->
     <!-- moment-js cdn -->
@@ -530,8 +392,8 @@
     <script src="./assets/js/slider.js"></script>
     <script src="./assets/js/modal.js"></script>
     <script src="./assets/js/classes.js"></script>
-    <script src="./assets/js/main.js" ></script>
-    <script src="./assets/js/index.js" ></script>
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 </body>

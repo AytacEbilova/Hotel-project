@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
     firstCardWidth=carousel.querySelector(".card").offsetWidth;
 });
 
+
 arrowBtns.forEach(btn => {
     btn.addEventListener("click", () => {
         if (btn.id === "prev") {
@@ -29,22 +30,24 @@ arrowBtns.forEach(btn => {
         carousell.scrollLeft += btn.id === "prev" ? -firstCard : firstCard;
     });
 });
-
+let faqs;
 //faqs section
-const faqs = document.querySelectorAll(".faq");
-
-faqs.forEach(faq => {
-    faq.addEventListener("click", () => {
-       
-        faqs.forEach(otherFaq => {
-            if (otherFaq !== faq) {
-                otherFaq.classList.remove("active");
-            }
+document.addEventListener('DOMContentLoaded',()=>{
+    faqs = document.querySelectorAll(".faq");
+    faqs.forEach(faq => {
+        faq.addEventListener("click", () => {
+           
+            faqs.forEach(otherFaq => {
+                if (otherFaq !== faq) {
+                    otherFaq.classList.remove("active");
+                }
+            });
+    
+            faq.classList.toggle("active");
         });
-
-        faq.classList.toggle("active");
     });
 });
+
 
 //testimonial section
 const cards = document.querySelector(".cards");
@@ -63,5 +66,34 @@ arrowBtnss.forEach(btn => {
         }
     });
 });
+
+function AutoScrollInstaSlider() {
+    let instagramSlider = document.getElementById('instagramSlider');
+    let imgWidth = instagramSlider.querySelector('img').offsetWidth;
+    let scrollLeft = instagramSlider.scrollLeft;
+
+    if (scrollLeft + instagramSlider.offsetWidth >= instagramSlider.scrollWidth) {
+
+        instagramSlider.innerHTML+=`
+        <img src="./assets/images/img_1.jpg" style="width: 20%" alt="">
+        <img src="./assets/images/img_2.jpg" style="width: 20%" alt="">
+        <img src="./assets/images/img_3.jpg" style="width: 20%" alt="">
+        <img src="./assets/images/img_4.jpg" style="width: 20%" alt="">
+        <img src="./assets/images/img_1.jpg" style="width: 20%" alt="">
+        <img src="./assets/images/img_2.jpg" style="width: 20%" alt="">
+        <img src="./assets/images/img_3.jpg" style="width: 20%" alt="">
+        `;
+    } else {
+        instagramSlider.scrollLeft += imgWidth;
+    }
+
+}
+
+setInterval(AutoScrollInstaSlider, 3000);
+
+
+
+
+
 
 

@@ -179,6 +179,69 @@
     }
 }
 
+#AddEmplyoeeModal{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.2);
+    height: 100%;
+    width: 100%;
+    form.modal-content {
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 20px;
+        position: absolute;
+        top: 50%;
+        width: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        object-fit: cover;
+        input,
+        textarea {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        #ConfirmAddEmployee {
+            width: 45%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #0056b3;
+            }
+        }
+        #CancelAddEmployee{
+            width: 45%;
+            padding: 10px;
+            background-color: #ff1e00;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #c40202;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            max-width: 300px;
+        }
+    }
+}
+
+
 //-----------------------------HERO-BANNER END--------------------------------------------------------------------------
 
 //-----------------------------FIND-NOW START-------------------------------------------------------------------------------
@@ -191,17 +254,18 @@
             @include flex();
             gap: 20px;
             padding: 30px 0;
+            flex-direction: column;
         }
 
         .btn-lg {
-            width: 50%;
+            width: 100%;
             padding: 10px 20px;
             background-color: $color-green;
             color: $color-white;
             border-style: none;
         }
 
-        .col-lg-6 {
+        .col-sm-6 {
             @include flex();
             gap: 5px;
 
@@ -232,7 +296,6 @@
         color: $color-green;
         font-size: 24px;
         text-transform: uppercase;
-        margin-left: 100px;
         display: flex;
 
         #add-service-btn {
@@ -250,12 +313,11 @@
         }
     }
 
-    .sliders {
+    .sliders {              
         max-width: 1200px;
         width: 100%;
 
         .carousel {
-            margin-left: 100px;
             padding: 50px 0;
             display: grid;
             grid-auto-flow: column;
@@ -267,13 +329,11 @@
 
 
             .card {
-                height: 340px;
+                height: auto;
                 list-style: none;
                 @include flex();
-                flex-direction: column;
-                padding-bottom: 15px;
                 border-style: none;
-                cursor: pointer;
+                border-radius: 0%;
 
                 .img {
 
@@ -318,6 +378,7 @@
 
     }
 }
+
 #edit-modal{
     display: none;
     position: fixed;
@@ -375,19 +436,23 @@
     }
 }
 
+
 @media screen and (max-width: 900px) {
-    .sliders {
-        .carousel {
-            grid-auto-columns: calc((100% / 2) - 9px);
+    .slide-container{
+        .sliders{
+            .carousel {
+                grid-auto-columns: calc((100% / 2) - 16px); 
+            }
         }
     }
-
 }
 
 @media screen and (max-width: 600px) {
-    .sliders {
-        .carousel {
-            grid-auto-columns: 100%;
+    .slide-container{
+        .sliders{
+            .carousel {
+                grid-auto-columns: 100%; 
+            }
         }
     }
 }
@@ -470,11 +535,10 @@
 //-------------------------BLOG SECTION START------------------------------------------------------------------------
 
 .carousell {
-    margin-left: 100px;
     padding: 50px 0;
     display: grid;
     grid-auto-flow: column;
-    gap: 20px;
+    gap: 30px;
     grid-auto-columns: calc((100% /3) - 20px);
     overflow: hidden;
     scroll-behavior: smooth;
@@ -532,6 +596,19 @@
         }
     }
 }
+
+@media (max-width: 991px) {
+    .carousell {
+      grid-auto-columns: calc((100% / 2) - 20px);
+    }
+  }
+  
+  
+  @media (max-width: 767px) {
+    .carousell {
+      grid-auto-columns: calc(100% - 20px);
+    }
+  }
 
 //--------------------------BLOG SECT END-------------------------------------------------------------------------------------------
 
@@ -654,7 +731,8 @@
         .card {
             height: 300px;
             list-style: none;
-            @include flex();
+            display: flex;
+            justify-content: space-between;
             padding-bottom: 15px;
             cursor: pointer;
             border: none;
@@ -662,6 +740,7 @@
 
             .text-content {
                 margin: 0 0 1rem;
+                padding: 30px 0;
 
                 #home-p {
                     font-weight: bold;
@@ -669,6 +748,7 @@
                     color: rgba(0, 0, 0, 0.555);
                     margin-left: 20px;
                     line-height: 1.1;
+                    
                 }
             }
 
@@ -726,11 +806,31 @@
 
 }
 
+@media (max-width: 991px) {
+    .testimonial-sect{
+        .container{
+            .cards {
+                grid-auto-columns: calc(100% /2 - 12px); 
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .testimonial-sect{
+        .container{
+            .cards {
+                grid-auto-columns: 100%; 
+            }
+        }
+    }
+
+}   
+
 //---------------------------TESTIMONIALS SECTION END-----------------------------------------------------------------------------------------------
 
 //---------------------------INSTAGRAM SECTION START----------------------------------------------------------------------------------------------------
 .instagram-sect {
-    height: 30vh;
 
     .row {
         .col-lg-3 {
@@ -757,6 +857,30 @@
             }
         }
     }
+    .instagram-slider{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        display: grid;
+        grid-auto-flow: column;
+        overflow: hidden;
+        scroll-behavior: smooth;
+        scrollbar-width: 0;
+    }
+
 }
+
+@media screen and (max-width: 992px) {
+    .instagram-slider img {
+        width: 50% !important;
+    }
+}
+@media screen and (max-width: 767px) {
+    .instagram-slider img {
+        width: 100% !important;
+    }
+}
+
+
 
 //---------------------------INSTAGRAM SECTION END-------------------------------------------------------------------------------------------------------

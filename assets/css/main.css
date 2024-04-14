@@ -443,6 +443,67 @@ footer .col-6 .tool .footer-icon li a:hover {
   background-color: #c40202;
 }
 
+#AddEmplyoeeModal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.2);
+  height: 100%;
+  width: 100%;
+}
+#AddEmplyoeeModal form.modal-content {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  position: absolute;
+  top: 50%;
+  width: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#AddEmplyoeeModal form.modal-content input,
+#AddEmplyoeeModal form.modal-content textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+#AddEmplyoeeModal form.modal-content #ConfirmAddEmployee {
+  width: 45%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#AddEmplyoeeModal form.modal-content #ConfirmAddEmployee:hover {
+  background-color: #0056b3;
+}
+#AddEmplyoeeModal form.modal-content #CancelAddEmployee {
+  width: 45%;
+  padding: 10px;
+  background-color: #ff1e00;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#AddEmplyoeeModal form.modal-content #CancelAddEmployee:hover {
+  background-color: #c40202;
+}
+@media screen and (max-width: 600px) {
+  #AddEmplyoeeModal form.modal-content {
+    max-width: 300px;
+  }
+}
+
 .find-now {
   background-color: rgb(248, 249, 250);
 }
@@ -452,15 +513,16 @@ footer .col-6 .tool .footer-icon li a:hover {
   align-items: center;
   gap: 20px;
   padding: 30px 0;
+  flex-direction: column;
 }
 .find-now .row .btn-lg {
-  width: 50%;
+  width: 100%;
   padding: 10px 20px;
   background-color: #00917c;
   color: white;
   border-style: none;
 }
-.find-now .row .col-lg-6 {
+.find-now .row .col-sm-6 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -483,7 +545,6 @@ footer .col-6 .tool .footer-icon li a:hover {
   color: #00917c;
   font-size: 24px;
   text-transform: uppercase;
-  margin-left: 100px;
   display: flex;
 }
 .slide-container .services-text #add-service-btn {
@@ -503,7 +564,6 @@ footer .col-6 .tool .footer-icon li a:hover {
   width: 100%;
 }
 .slide-container .sliders .carousel {
-  margin-left: 100px;
   padding: 50px 0;
   display: grid;
   grid-auto-flow: column;
@@ -514,15 +574,13 @@ footer .col-6 .tool .footer-icon li a:hover {
   scrollbar-width: 0;
 }
 .slide-container .sliders .carousel .card {
-  height: 340px;
+  height: auto;
   list-style: none;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  padding-bottom: 15px;
   border-style: none;
-  cursor: pointer;
+  border-radius: 0%;
 }
 .slide-container .sliders .carousel .card .img img {
   width: 60px;
@@ -613,12 +671,12 @@ footer .col-6 .tool .footer-icon li a:hover {
 }
 
 @media screen and (max-width: 900px) {
-  .sliders .carousel {
-    grid-auto-columns: calc(50% - 9px);
+  .slide-container .sliders .carousel {
+    grid-auto-columns: calc(50% - 16px);
   }
 }
 @media screen and (max-width: 600px) {
-  .sliders .carousel {
+  .slide-container .sliders .carousel {
     grid-auto-columns: 100%;
   }
 }
@@ -678,11 +736,10 @@ footer .col-6 .tool .footer-icon li a:hover {
 }
 
 .carousell {
-  margin-left: 100px;
   padding: 50px 0;
   display: grid;
   grid-auto-flow: column;
-  gap: 20px;
+  gap: 30px;
   grid-auto-columns: calc(33.3333333333% - 20px);
   overflow: hidden;
   scroll-behavior: smooth;
@@ -730,6 +787,16 @@ footer .col-6 .tool .footer-icon li a:hover {
   gap: 5px;
 }
 
+@media (max-width: 991px) {
+  .carousell {
+    grid-auto-columns: calc(50% - 20px);
+  }
+}
+@media (max-width: 767px) {
+  .carousell {
+    grid-auto-columns: calc(100% - 20px);
+  }
+}
 .faq-sect {
   background-color: #00917c;
   margin-top: -20rem;
@@ -823,8 +890,7 @@ footer .col-6 .tool .footer-icon li a:hover {
   height: 300px;
   list-style: none;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
   padding-bottom: 15px;
   cursor: pointer;
   border: none;
@@ -832,6 +898,7 @@ footer .col-6 .tool .footer-icon li a:hover {
 }
 .testimonial-sect .cards .card .text-content {
   margin: 0 0 1rem;
+  padding: 30px 0;
 }
 .testimonial-sect .cards .card .text-content #home-p {
   font-weight: bold;
@@ -882,8 +949,15 @@ footer .col-6 .tool .footer-icon li a:hover {
   gap: 5px;
 }
 
-.instagram-sect {
-  height: 30vh;
+@media (max-width: 991px) {
+  .testimonial-sect .container .cards {
+    grid-auto-columns: calc(50% - 12px);
+  }
+}
+@media (max-width: 767px) {
+  .testimonial-sect .container .cards {
+    grid-auto-columns: 100%;
+  }
 }
 .instagram-sect .row .col-lg-3 h2 {
   font-family: "Work Sans", sans-serif;
@@ -902,7 +976,27 @@ footer .col-6 .tool .footer-icon li a:hover {
   font-weight: 400;
   line-height: 1.2;
 }
+.instagram-sect .instagram-slider {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: grid;
+  grid-auto-flow: column;
+  overflow: hidden;
+  scroll-behavior: smooth;
+  scrollbar-width: 0;
+}
 
+@media screen and (max-width: 992px) {
+  .instagram-slider img {
+    width: 50% !important;
+  }
+}
+@media screen and (max-width: 767px) {
+  .instagram-slider img {
+    width: 100% !important;
+  }
+}
 #service-hero-banner {
   height: 100vh;
   min-height: 780px;
